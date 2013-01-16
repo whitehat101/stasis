@@ -313,7 +313,9 @@ class Stasis
 
   # Trigger an event on every plugin in the controller.
   def trigger(type)
+    puts "#trigger(type = #{type})"
     each_priority do |priority|
+      puts "#trigger @controller._send_to_plugin(priority = #{priority}, type = #{type})"
       @controller._send_to_plugin(priority, type)
     end
   end
