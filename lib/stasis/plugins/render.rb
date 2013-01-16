@@ -27,7 +27,7 @@ class Stasis
       if @stasis.controller
         path = @stasis.controller._resolve(path)
       end
-      
+
       output =
         if text
           text
@@ -38,6 +38,9 @@ class Stasis
               @stasis.trigger(:before_render)
             end
           end
+
+          puts "how did I get here?"
+          puts "Stasis::Render#render(path_or_options=#{path_or_options}, options=#{options})"
 
           output =
             if Tilt.mappings.keys.include?(File.extname(path)[1..-1])
@@ -61,7 +64,7 @@ class Stasis
 
           output
         end
-      
+
       output
     end
 
