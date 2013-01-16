@@ -190,6 +190,7 @@ class Stasis
       # Trigger all plugin `before_render` events.
       trigger(:before_render)
 
+      puts "#render @path: #{@path}"
       # Skip if `@path` set to `nil`.
       next unless @path
 
