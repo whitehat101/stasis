@@ -318,6 +318,7 @@ class Stasis
       puts "#trigger @controller._send_to_plugin(priority = #{priority}, type = #{type})"
       @controller._send_to_plugin(priority, type)
     end
+    puts "end - #trigger(type = #{type})"
   end
 
   private
