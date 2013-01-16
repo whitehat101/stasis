@@ -38,6 +38,7 @@ class Stasis
     # This event triggers before each file renders through Stasis. It finds matching
     # blocks for the `path` and evaluates those blocks using the `action` as a scope.
     def before_render
+      puts "Stasis::Before#before_render"
       matches = _match_key?(@blocks, @stasis.path)
       matches.each do |group|
         group.each do |(path, block)|

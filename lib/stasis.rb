@@ -315,7 +315,7 @@ class Stasis
   def trigger(type)
     puts "#trigger(type = #{type})"
     each_priority do |priority|
-      puts "#trigger #{@controller.inspect}._send_to_plugin(priority = #{priority}, type = #{type})"
+      puts "#trigger @controller._send_to_plugin(priority = #{priority}, type = #{type})"
       @controller._send_to_plugin(priority, type)
     end
   end
