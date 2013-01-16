@@ -187,8 +187,10 @@ class Stasis
       # Change current working directory.
       Dir.chdir(File.dirname(@path))
 
+      puts "#render ext: #{ext} --"
       # Trigger all plugin `before_render` events.
       trigger(:before_render)
+      puts "#render ext: #{ext} -- --"
 
       puts "#render @path: #{@path}"
       # Skip if `@path` set to `nil`.
